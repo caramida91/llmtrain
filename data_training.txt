@@ -1,0 +1,110 @@
+Cross-validation macro F1: 0.9064 (+/- 0.0392)
+Final test macro F1-score: 0.4748 -> 'balanced' - class weight
+
+              precision    recall  f1-score   support
+
+         DoS       0.96      0.76      0.85      7460
+      Normal       0.63      0.97      0.77      9711
+       Probe       0.84      0.60      0.70      2421
+         R2L       0.50      0.00      0.00      2885
+         U2R       0.50      0.03      0.06        67
+
+    accuracy                           0.74     22544
+   macro avg       0.69      0.47      0.47     22544
+weighted avg       0.75      0.74      0.69     22544
+-------------------------------------------------------
+Experiment 1 — Basic Random Forest
+
+Cross-validation macro F1: 0.9148 (+/- 0.0400)
+Final test macro F1-score: 0.4938 -> None - class weight -> better than 'balanced'
+
+              precision    recall  f1-score   support
+
+         DoS       0.96      0.79      0.86      7460
+      Normal       0.64      0.97      0.78      9711
+       Probe       0.86      0.62      0.72      2421
+         R2L       0.94      0.01      0.02      2885
+         U2R       0.60      0.04      0.08        67
+
+    accuracy                           0.75     22544
+   macro avg       0.80      0.49      0.49     22544
+weighted avg       0.81      0.75      0.70     22544
+-------------------------------------------------------
+
+Experiment 2 — More trees && class weight none
+
+Cross-validation macro F1: 0.9138 (+/- 0.0411)
+Final test macro F1-score: 0.4956 -> just a bit better
+
+              precision    recall  f1-score   support
+
+         DoS       0.96      0.78      0.86      7460
+      Normal       0.64      0.97      0.78      9711
+       Probe       0.86      0.63      0.73      2421
+         R2L       0.95      0.01      0.03      2885
+         U2R       0.75      0.04      0.08        67
+
+    accuracy                           0.75     22544
+   macro avg       0.83      0.49      0.50     22544
+weighted avg       0.81      0.75      0.70     22544
+
+-------------------------------------------------------
+Experiment 3 — More trees && class weight 'balanced'
+
+Cross-validation macro F1: 0.9003 (+/- 0.0440)
+Final test macro F1-score: 0.4756 -> worse
+
+              precision    recall  f1-score   support
+
+         DoS       0.96      0.76      0.85      7460
+      Normal       0.63      0.97      0.77      9711
+       Probe       0.85      0.60      0.70      2421
+         R2L       0.50      0.00      0.00      2885
+         U2R       0.50      0.03      0.06        67
+
+    accuracy                           0.74     22544
+   macro avg       0.69      0.47      0.48     22544
+weighted avg       0.75      0.74      0.69     22544
+-------------------------------------------------------
+Experiment 4 — Limit depth &&  more trees && class weight None
+
+Cross-validation macro F1: 0.9169 (+/- 0.0374)
+Final test macro F1-score: 0.5005 -> best results
+
+              precision    recall  f1-score   support
+
+         DoS       0.96      0.78      0.86      7460
+      Normal       0.65      0.97      0.78      9711
+       Probe       0.86      0.63      0.73      2421
+         R2L       0.97      0.01      0.02      2885
+         U2R       0.80      0.06      0.11        67
+
+    accuracy                           0.75     22544
+   macro avg       0.85      0.49      0.50     22544
+weighted avg       0.81      0.75      0.70     22544
+
+-------------------------------------------------------
+Experiment 5 — Limit depth &&  even more trees(1000) && class weight None
+
+Cross-validation macro F1: 0.9147 (+/- 0.0336)
+Final test macro F1-score: 0.5007 -> very small change in score
+
+              precision    recall  f1-score   support
+
+         DoS       0.96      0.78      0.86      7460
+      Normal       0.64      0.97      0.78      9711
+       Probe       0.86      0.63      0.73      2421
+         R2L       0.95      0.01      0.03      2885
+         U2R       0.80      0.06      0.11        67
+
+    accuracy                           0.75     22544
+   macro avg       0.84      0.49      0.50     22544
+weighted avg       0.81      0.75      0.70     22544
+
+
+
+
+
+
+
+
